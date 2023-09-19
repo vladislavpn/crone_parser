@@ -19,8 +19,10 @@ public class Main {
     }
 
     static void printCron(String[] args){
-        System.out.println("input: " + Arrays.toString(args));
-        System.out.print("minute        ");
+        System.out.println("input: ");
+        for(var i : args) System.out.printf(i + " ");
+
+        System.out.print("\nminute        ");
         for(var i : parseCron(args[0], 60, 0)) System.out.print(i + " ");
         System.out.println();
         System.out.print("hour          ");
